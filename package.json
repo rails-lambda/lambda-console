@@ -1,15 +1,20 @@
 {
-  "name": "lambda-console",
+  "name": "lambdaconsole",
   "version": "1.0.0",
   "description": "A CLI to run shell commands or interact with your application on Lambda.",
   "main": "index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rails-lambda/lambda-console"
+  },
   "scripts": {
     "start": "node index.js",
     "debug": "NODE_INSPECT_RESUME_ON_START=1 node inspect index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "bin": "./index.js",
   "author": "",
   "license": "MIT",
   "dependencies": {
