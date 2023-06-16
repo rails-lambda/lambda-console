@@ -1,10 +1,10 @@
-import Program from "./program.js";
-import Welcome from "./welcome.js";
-import Regions from "./regions.js";
-import Profiles from "./profiles.js";
-import Identity from "./identity.js";
-import Lambda from "./lambda.js";
-import Mode from "./mode.js";
+import Program from "./program.mjs";
+import Welcome from "./welcome.mjs";
+import Regions from "./regions.mjs";
+import Profiles from "./profiles.mjs";
+import Identity from "./identity.mjs";
+import Lambda from "./lambda.mjs";
+import Mode from "./mode.mjs";
 
 class Session {
   constructor() {

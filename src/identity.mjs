@@ -1,5 +1,4 @@
 import chalk from "chalk";
-
 import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

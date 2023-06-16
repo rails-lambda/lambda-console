@@ -1,6 +1,6 @@
 import chalk from "chalk";
-
 import fs from "fs";
+
 const BANNER = fs.readFileSync("./src/banner.txt", "utf8");
 
 class Welcome {

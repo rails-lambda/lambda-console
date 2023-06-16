@@ -1,7 +1,6 @@
 import select from "@inquirer/select";
-
-import ModeRunner from "./mode-runner.js";
-import ModeInteract from "./mode-interact.js";
+import ModeRunner from "./mode-runner.mjs";
+import ModeInteract from "./mode-interact.mjs";
 
 class Mode {
   constructor(lambda) {

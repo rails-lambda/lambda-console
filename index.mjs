@@ -1,4 +1,6 @@
-import Session from "./src/session.js";
+#!/usr/bin/env node
+
+import Session from "./src/session.mjs";
 const session = new Session();
 
 async function main() {

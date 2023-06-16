@@ -1,7 +1,6 @@
 import inquirer from "inquirer";
 import inquirerPrompt from "inquirer-autocomplete-prompt";
 inquirer.registerPrompt("autocomplete", inquirerPrompt);
-
 import { loadSharedConfigFiles } from "@aws-sdk/shared-ini-file-loader";
 
 class Profiles {

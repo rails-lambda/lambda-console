@@ -5,7 +5,9 @@
 
 ## ⬇️ Installation
 
-...
+```shell
+npm install -g lambda-console-cli
+```
 
 ## 🐚 Usage
 

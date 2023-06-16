@@ -2,7 +2,6 @@ import inquirer from "inquirer";
 import inquirerPrompt from "inquirer-autocomplete-prompt";
 inquirer.registerPrompt("autocomplete", inquirerPrompt);
 import { createSpinner } from "nanospinner";
-
 import { AccountClient, paginateListRegions } from "@aws-sdk/client-account";
 
 class Regions {
