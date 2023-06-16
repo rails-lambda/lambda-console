@@ -1,7 +1,11 @@
 # Lambda Console
 
-☁️🐚 A CLI to run shell commands or interact with your application on Lambda.
+☁️🐚 A CLI to run shell commands or interact with your application on Lambda. This includes typical shell commands like `cat /etc/os-release` or language-specific interactions directly with your running application like Ruby's IRB prompt or Rails console.
 
+![Lambda Console CLI Screenshot](./images/lambda-console-cli-dark.png#gh-dark-mode-only)
+![Lambda Console CLI Screenshot](./images/lambda-console-cli-light.png#gh-light-mode-only)
+
+The Lambda Console is language agnostic and its [event specification](#specfication) can be implemented in any language. See our list of [supporting implementation](#implementations) for details.
 
 ## ⬇️ Installation
 
@@ -11,7 +15,23 @@ npm install -g lambda-console-cli
 
 ## 🐚 Usage
 
-...
+Assuming your language or application framework has a [supporting implementation](#implementations) and that you have an AWS CLI user or profile configured with the [required permissions](#permissions), simply invoke `lambda-console-cli` binary.
+
+As seen in the screenshot above, it will present a series of interactive prompts to configure the AWS SDKs needed to invoke your Lambda function with the console [event specification](#specfication). All interactive prompts have CLI options.
+
+```
+> lambda-console-cli --help
+Usage: lambda-console [options]
+
+A CLI to run shell commands or interact with your application on Lambda.
+
+Options:
+  -v, --version                 Output the current version
+  -r, --region <string>         AWS Region name
+  -p, --profile <string>        AWS Profile name
+  -f, --function-name <string>  AWS Lambda Function Name
+  -h, --help                    display help for command
+```
 
 ## 🏘️ Implementations
 
@@ -101,7 +121,7 @@ These rules apply to any implementation Lambda response for the Lambda Console t
 - Should our interact command capture all stdout or just the return of the evaluated expression?
 - Can we leverage some pseudo-tty features for run commands to support features like ANSI colors?
 
-## Permission
+## Permissions
 
 The user running this CLI will need the following IAM actions associated with their user or role:
 
