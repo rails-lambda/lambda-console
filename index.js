@@ -1,4 +1,4 @@
-const Session = require("./src/session.js");
+import Session from "./src/session.js";
 const session = new Session();
 
 async function main() {

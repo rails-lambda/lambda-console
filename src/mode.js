@@ -1,6 +1,7 @@
-const select = require("@inquirer/select");
-const ModeRunner = require("./mode-runner.js");
-const ModeInteract = require("./mode-interact.js");
+import select from "@inquirer/select";
+
+import ModeRunner from "./mode-runner.js";
+import ModeInteract from "./mode-interact.js";
 
 class Mode {
   constructor(lambda) {
@@ -50,4 +51,4 @@ class Mode {
   }
 }
 
-module.exports = Mode;
+export default Mode;

@@ -1,12 +1,13 @@
-const inquirer = require("inquirer");
-const inquirerPrompt = require("inquirer-autocomplete-prompt");
+import inquirer from "inquirer";
+import inquirerPrompt from "inquirer-autocomplete-prompt";
 inquirer.registerPrompt("autocomplete", inquirerPrompt);
-const createSpinner = require("nanospinner").createSpinner;
-const {
+import { createSpinner } from "nanospinner";
+
+import {
   LambdaClient,
   paginateListFunctions,
   InvokeCommand,
-} = require("@aws-sdk/client-lambda");
+} from "@aws-sdk/client-lambda";
 
 class Lambda {
   constructor(session) {
@@ -78,4 +79,4 @@ class Lambda {
   }
 }
 
-module.exports = Lambda;
+export default Lambda;

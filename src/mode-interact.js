@@ -1,5 +1,5 @@
-const chalk = require("chalk");
-const input = require("@inquirer/prompts").input;
+import chalk from "chalk";
+import { input } from "@inquirer/prompts";
 
 class ModeInteract {
   constructor(lambda) {
@@ -38,4 +38,4 @@ class ModeInteract {
   }
 }
 
-module.exports = ModeInteract;
+export default ModeInteract;

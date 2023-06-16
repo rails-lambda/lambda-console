@@ -1,10 +1,10 @@
-const Program = require("./program.js");
-const Welcome = require("./welcome.js");
-const Regions = require("./regions.js");
-const Profiles = require("./profiles.js");
-const Identity = require("./identity.js");
-const Lambda = require("./lambda.js");
-const Mode = require("./mode.js");
+import Program from "./program.js";
+import Welcome from "./welcome.js";
+import Regions from "./regions.js";
+import Profiles from "./profiles.js";
+import Identity from "./identity.js";
+import Lambda from "./lambda.js";
+import Mode from "./mode.js";
 
 class Session {
   constructor() {
@@ -58,4 +58,4 @@ class Session {
   }
 }
 
-module.exports = Session;
+export default Session;
