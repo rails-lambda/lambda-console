@@ -1,12 +1,25 @@
 import chalk from "chalk";
-import fs from "fs";
 
-let BANNER;
-if (process.env.ESBUILD) {
-  BANNER = require("./banner.txt");
-} else {
-  BANNER = fs.readFileSync("./src/banner.txt", "utf8");
-}
+const heredoc = function (fn) {
+  const hd = fn.toString().match(/\/\*\s*([\s\S]*?)\s*\*\//m)[1];
+  return hd.replace("REPLACEME", "");
+};
+
+const HEADER = heredoc(function () {
+  /*
+REPLACEME
+         ╓╔╔╗╗╖                                                        
+     ╓╔╬╬╬╬╬╬╬╬╬╬╗╖                                                    
+  ┌╠╬╬╬╬╬╙╙╙╠╬╬╬╬╬╬╬╣┐    ___                               _          
+  ╠╬╬╬╬╬╬╦╕ └╠╬╬╬╬╬╬╬╣   (  _`\                            (_ )        
+  ╠╬╬╬╬╬╬╬╩  ╙╬╬╬╬╬╬╬╣   | ( (_)   _     ___    ___    _    | |    __  
+  ╠╬╬╬╬╬╬└ ╓  ╙╬╬╬╬╬╬╣   | |  _  /'_`\ /' _ `\/',__) /'_`\  | |  /'__`\
+  ╠╬╬╬╬╩  ╦╬╬  └╙╠╬╬╬╣   | (_( )( (_) )| ( ) |\__, \( (_) ) | | (  ___/
+  └╠╬╬╬╦╦╬╬╬╬╬╔╦╬╬╬╬╣┘   (____/'`\___/'(_) (_)(____/`\___/'(___)`\____)
+     ╙╚╬╬╬╬╬╬╬╬╬╬╝╜                                                    
+         ╙╚╚╝╝╜                                                         
+*/
+});
 
 class Welcome {
   constructor(session) {
@@ -19,7 +32,7 @@ class Welcome {
   }
 
   get header() {
-    return chalk.hex("#FFA500")(BANNER);
+    return chalk.hex("#FFA500")(HEADER);
   }
 
   get description() {
