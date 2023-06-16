@@ -1,4 +1,4 @@
-import Session from "./src/session.js";
+const Session = require("./src/session.js");
 const session = new Session();
 
 async function main() {
@@ -11,4 +11,6 @@ async function main() {
   await session.run();
 }
 
-await main();
+(async () => {
+  await main();
+})();

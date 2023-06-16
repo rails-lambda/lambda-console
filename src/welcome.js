@@ -1,6 +1,6 @@
-import chalk from "chalk";
+const chalk = require("chalk");
+const fs = require("fs");
 
-import fs from "fs";
 const BANNER = fs.readFileSync("./src/banner.txt", "utf8");
 
 class Welcome {
@@ -26,4 +26,4 @@ class Welcome {
   }
 }
 
-export default Welcome;
+module.exports = Welcome;

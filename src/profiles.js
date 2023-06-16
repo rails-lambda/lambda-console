@@ -1,8 +1,7 @@
-import inquirer from "inquirer";
-import inquirerPrompt from "inquirer-autocomplete-prompt";
+const inquirer = require("inquirer");
+const inquirerPrompt = require("inquirer-autocomplete-prompt");
 inquirer.registerPrompt("autocomplete", inquirerPrompt);
-
-import { loadSharedConfigFiles } from "@aws-sdk/shared-ini-file-loader";
+const { loadSharedConfigFiles } = require("@aws-sdk/shared-ini-file-loader");
 
 class Profiles {
   async askFor() {
@@ -33,4 +32,4 @@ class Profiles {
   }
 }
 
-export default Profiles;
+module.exports = Profiles;

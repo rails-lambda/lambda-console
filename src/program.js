@@ -1,4 +1,4 @@
-import { Command } from "commander";
+const { Command } = require("commander");
 
 class Program {
   static VERSION = "1.0.0";
@@ -15,4 +15,4 @@ class Program {
     .option("-f, --function-name <string>", "AWS Lambda Function Name");
 }
 
-export default Program;
+module.exports = Program;

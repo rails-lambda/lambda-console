@@ -1,6 +1,6 @@
-import chalk from "chalk";
-import { input } from "@inquirer/prompts";
-import select from "@inquirer/select";
+const chalk = require("chalk");
+const input = require("@inquirer/prompts").input;
+const select = require("@inquirer/select");
 
 class ModeRunner {
   constructor(lambda) {
@@ -67,4 +67,4 @@ class ModeRunner {
   }
 }
 
-export default ModeRunner;
+module.exports = ModeRunner;

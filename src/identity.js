@@ -1,6 +1,5 @@
-import chalk from "chalk";
-
-import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts";
+const chalk = require("chalk");
+const { STSClient, GetCallerIdentityCommand } = require("@aws-sdk/client-sts");
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const check = chalk.green("✔");
@@ -41,4 +40,4 @@ class Identity {
   }
 }
 
-export default Identity;
+module.exports = Identity;

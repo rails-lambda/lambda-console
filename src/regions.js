@@ -1,9 +1,11 @@
-import inquirer from "inquirer";
-import inquirerPrompt from "inquirer-autocomplete-prompt";
+const inquirer = require("inquirer");
+const inquirerPrompt = require("inquirer-autocomplete-prompt");
 inquirer.registerPrompt("autocomplete", inquirerPrompt);
-import { createSpinner } from "nanospinner";
-
-import { AccountClient, paginateListRegions } from "@aws-sdk/client-account";
+const createSpinner = require("nanospinner").createSpinner;
+const {
+  AccountClient,
+  paginateListRegions,
+} = require("@aws-sdk/client-account");
 
 class Regions {
   static DEFAULTS = ["us-east-1", "us-east-2", "us-west-1", "us-west-2"];
@@ -59,4 +61,4 @@ class Regions {
   }
 }
 
-export default Regions;
+module.exports = Regions;

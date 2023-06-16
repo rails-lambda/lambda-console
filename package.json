@@ -1,20 +1,41 @@
 {
-  "name": "lambdaconsole",
-  "version": "1.0.0",
+  "name": "lambda-console-cli",
+  "version": "1.0.1",
   "description": "A CLI to run shell commands or interact with your application on Lambda.",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/rails-lambda/lambda-console"
   },
+  "pkg": {
+    "targets": [
+      "node14-linux-x64",
+      "node14-linux-arm64",
+      "node14-macos-x64",
+      "node14-macos-arm64",
+      "node14-win-x64"
+    ],
+    "outputPath": "lambda-console-cli"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "start": "node index.js",
     "debug": "NODE_INSPECT_RESUME_ON_START=1 node inspect index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg ."
   },
-  "keywords": [],
-  "bin": "./index.js",
+  "keywords": [
+    "aws",
+    "lambda",
+    "console",
+    "cli"
+  ],
+  "bin": {
+    "lambda-console-cli": "./index.js"
+  },
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -23,10 +44,13 @@
     "@aws-sdk/shared-ini-file-loader": "^3.347.0",
     "@inquirer/prompts": "^2.1.1",
     "@inquirer/select": "^1.2.1",
-    "chalk": "^5.2.0",
+    "chalk": "4.1.2",
     "commander": "^10.0.1",
-    "inquirer": "^9.2.7",
-    "inquirer-autocomplete-prompt": "^3.0.0",
+    "inquirer": "8.2.5",
+    "inquirer-autocomplete-prompt": "2.0.0",
     "nanospinner": "^1.1.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
   }
 }
