@@ -1,7 +1,7 @@
 import { Command } from "commander";
 
 class Program {
-  static VERSION = "1.0.0";
+  static VERSION = "1.0.6";
   static NAME = "lambda-console";
   static DESCRIPTION =
     "A CLI to run shell commands or interact with your application on Lambda.";
