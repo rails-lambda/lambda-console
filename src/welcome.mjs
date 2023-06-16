@@ -1,7 +1,12 @@
 import chalk from "chalk";
 import fs from "fs";
 
-const BANNER = fs.readFileSync("./src/banner.txt", "utf8");
+let BANNER;
+if (process.env.ESBUILD) {
+  BANNER = require("./banner.txt");
+} else {
+  BANNER = fs.readFileSync("./src/banner.txt", "utf8");
+}
 
 class Welcome {
   constructor(session) {

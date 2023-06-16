@@ -1,6 +1,6 @@
 {
   "name": "lambda-console-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A CLI to run shell commands or interact with your application on Lambda.",
   "main": "index.js",
   "type": "module",
@@ -12,7 +12,7 @@
     "node": ">=14.0.0"
   },
   "bin": {
-    "lambda-console-cli": "./index.mjs"
+    "lambda-console-cli": "./dist/lambda-console-cli.js"
   },
   "keywords": [
     "aws",
@@ -23,12 +23,13 @@
   "scripts": {
     "start": "node index.js",
     "debug": "NODE_INSPECT_RESUME_ON_START=1 node inspect index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx esbuild index.mjs --bundle --platform=node --outfile=dist/lambda-console-cli.js --define:process.env.ESBUILD=\"1\""
   },
   "author": {
-    "name" : "Ken Collins",
-    "email" : "ken@metaskills.net",
-    "url" : "https://github.com/metaskills"
+    "name": "Ken Collins",
+    "email": "ken@metaskills.net",
+    "url": "https://github.com/metaskills"
   },
   "license": "MIT",
   "dependencies": {
@@ -42,5 +43,8 @@
     "inquirer": "^9.2.7",
     "inquirer-autocomplete-prompt": "^3.0.0",
     "nanospinner": "^1.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.18.4"
   }
 }
