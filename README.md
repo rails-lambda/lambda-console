@@ -120,6 +120,9 @@ These rules apply to any implementation Lambda response for the Lambda Console t
 
 - Should our interact command capture all stdout or just the return of the evaluated expression?
 - Can we leverage some pseudo-tty features for run commands to support features like ANSI colors?
+- Creating a more formal response JSON schema as we create more features coupled to that response.
+- Add response headers so implementations can signal a language being used for code highlighting.
+- Can we stream STDOUT and STDERR back to the client as it happens? Lambda Streaming?
 
 ## Permissions
 
