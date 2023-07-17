@@ -1,6 +1,6 @@
 {
   "name": "lambda-console-cli",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A CLI to run shell commands or interact with your application on Lambda.",
   "main": "index.js",
   "type": "module",

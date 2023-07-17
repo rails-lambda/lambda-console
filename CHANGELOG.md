@@ -2,7 +2,7 @@
 
 See this http://keepachangelog.com link for information on how we want this documented formatted.
 
-## 1.0.7
+## 1.0.8
 
 ### Fixed
 
