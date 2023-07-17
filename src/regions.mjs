@@ -8,7 +8,8 @@ class Regions {
   static DEFAULTS = ["us-east-1", "us-east-2", "us-west-1", "us-west-2"];
 
   constructor() {
-    this.default = process.env.AWS_REGION || process.env.AWS_DEFAULT_REGION;
+    this.default =
+      process.env.AWS_REGION || process.env.AWS_DEFAULT_REGION || "us-east-1";
     this.spinner = createSpinner("Loading Regions...");
   }
 
