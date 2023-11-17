@@ -39,6 +39,7 @@ Have you created a language-specific package or implemented the Lambda Console s
 
 - Ruby: The [lambda-console-ruby](https://github.com/rails-lambda/lambda-console-ruby) gem for any Ruby Lambda.
 - Rails: Integrated into the [Lamby](https://github.com/rails-lambda/lamby) v5 for Rails on Lambda.
+- Node: Demo https://github.com/rails-lambda/lambda-console/issues/2
 
 ## 📐 Specification 
 
